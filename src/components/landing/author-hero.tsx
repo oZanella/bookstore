@@ -6,7 +6,7 @@ export function AuthorHero() {
     <section className="mx-auto grid max-w-6xl grid-cols-1 items-center gap-10 px-6 pt-20 pb-16 sm:px-10 sm:pt-28 md:grid-cols-[minmax(0,300px)_1fr] md:gap-16 lg:px-16 lg:pt-32 lg:pb-20 xl:grid-cols-[minmax(0,360px)_1fr] xl:gap-20">
       <ImagePlaceholder
         label="Foto da autora"
-        className="aspect-[4/5] w-full max-w-[300px] rounded-(--radius) xl:max-w-[360px]"
+        className="aspect-4/5 w-full max-w-75 rounded-(--radius) xl:max-w-90"
       />
 
       <div className="max-w-2xl space-y-6 lg:space-y-8">
