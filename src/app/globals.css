@@ -1,0 +1,68 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+
+:root {
+  --radius: 10px;
+
+  --color-bg-default: #faf7f2;
+  --color-bg-paper: #ffffff;
+  --color-text-primary: #2b241d;
+  --color-text-secondary: #6b6055;
+  --color-text-disabled: #b3aa9e;
+
+  --color-primary-main: #7a5c3e;
+  --color-primary-light: #9a7c58;
+  --color-primary-dark: #5c4329;
+  --color-primary-foreground: #fdfbf8;
+
+  --color-accent-main: #b3492f;
+
+  --color-border: #e7ded2;
+  --color-muted: #f1ebe0;
+}
+
+@theme inline {
+  --color-background: var(--color-bg-default);
+  --color-foreground: var(--color-text-primary);
+
+  --color-card: var(--color-bg-paper);
+  --color-card-foreground: var(--color-text-primary);
+
+  --color-muted: var(--color-muted);
+  --color-muted-foreground: var(--color-text-secondary);
+
+  --color-border: var(--color-border);
+  --color-ring: var(--color-primary-main);
+
+  --color-primary: var(--color-primary-main);
+  --color-primary-foreground: var(--color-primary-foreground);
+
+  --color-accent: var(--color-accent-main);
+  --color-accent-foreground: #fdfbf8;
+
+  --font-serif: var(--font-heading);
+  --font-sans: var(--font-body);
+
+  --radius: var(--radius);
+}
+
+@layer base {
+  html,
+  body {
+    height: 100%;
+  }
+
+  body {
+    background: var(--color-bg-default);
+    color: var(--color-text-primary);
+    @apply bg-background text-foreground antialiased;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  button {
+    @apply cursor-pointer;
+  }
+}
