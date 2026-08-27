@@ -96,8 +96,8 @@ export function PurchaseDialog({ open, onOpenChange, bookTitle, bookPrice }: Pur
                 </SelectTrigger>
                 <SelectContent>
                   {brazilianStates.map((state) => (
-                    <SelectItem key={state.value} value={state.value}>
-                      {state.value} · {state.label}
+                    <SelectItem key={state} value={state}>
+                      {state}
                     </SelectItem>
                   ))}
                 </SelectContent>
