@@ -123,7 +123,7 @@ export function PurchaseDialog({ open, onOpenChange, bookTitle, bookPrice }: Pur
 
           <DialogFooter>
             <Button type="submit" className="w-full">
-              Continuar no WhatsApp
+              Prosseguir com a compra
             </Button>
           </DialogFooter>
         </form>
