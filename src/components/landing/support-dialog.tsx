@@ -1,6 +1,7 @@
 'use client';
 
 import { HeartHandshake } from 'lucide-react';
+import Image from 'next/image';
 
 import { Button } from '@/components/ui/button';
 import {
@@ -30,11 +31,13 @@ export function SupportDialog() {
           <DialogDescription>Escaneie o QR Code abaixo para fazer uma doação via Pix.</DialogDescription>
         </DialogHeader>
 
-        <ImagePlaceholder label="QR Code de doação" className="mx-auto aspect-square w-48 rounded-(--radius)" />
-
-        <p className="text-center text-xs text-muted-foreground">
-          Chave Pix: <span className="font-medium text-foreground">{siteConfig.pixKey}</span>
-        </p>
+        {siteConfig.pixQrCodeUrl ? (
+          <div className="relative mx-auto aspect-square w-48 overflow-hidden rounded-(--radius) bg-muted">
+            <Image src={siteConfig.pixQrCodeUrl} alt="QR Code de doação via Pix" fill sizes="192px" className="object-contain" />
+          </div>
+        ) : (
+          <ImagePlaceholder label="QR Code de doação" className="mx-auto aspect-square w-48 rounded-(--radius)" />
+        )}
       </DialogContent>
     </Dialog>
   );

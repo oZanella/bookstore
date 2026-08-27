@@ -25,8 +25,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: siteConfig.authorName,
-  description: siteConfig.tagline,
+  title: `Livros - ${siteConfig.authorName} `
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

@@ -3,12 +3,12 @@ import { books } from '@/data/books';
 
 export function BooksList() {
   return (
-    <section className="mx-auto max-w-6xl border-t border-border px-6 py-14 sm:px-10 lg:px-16 lg:py-20">
-      <h2 className="font-serif text-2xl font-semibold text-foreground lg:text-3xl">Obras</h2>
+    <section className="mx-auto max-w-5xl border-t border-border px-6 py-8 sm:px-8 sm:py-10 lg:px-10 lg:py-12">
+      <h2 className="font-serif text-xl font-semibold text-foreground lg:text-2xl">Repertório do Autor</h2>
 
-      <div className="mt-8 flex flex-col gap-6 lg:mt-10 lg:gap-8">
+      <div className="mt-6 flex flex-col gap-5 lg:mt-8 lg:gap-6">
         {books.map((book) => (
-          <BookCard key={book.id} book={book} />
+          <BookCard key={book.id} book={book} priority />
         ))}
       </div>
     </section>
