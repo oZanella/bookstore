@@ -23,7 +23,7 @@ export function BookCard({ book, priority = false }: BookCardProps) {
 
   return (
     <div className="flex flex-col overflow-hidden rounded-none border border-border bg-card shadow-sm sm:h-84 sm:flex-row lg:h-96">
-      <div className="relative mx-auto aspect-2/3 w-full max-w-56 shrink-0 bg-muted sm:mx-0 sm:h-full sm:w-56 sm:max-w-none md:w-64">
+      <div className="relative aspect-2/3 w-full shrink-0 bg-muted sm:h-full sm:w-56 md:w-64">
         {book.cover ? (
           <Image
             src={book.cover}
@@ -40,7 +40,7 @@ export function BookCard({ book, priority = false }: BookCardProps) {
       </div>
 
       <div className="flex flex-1 flex-col overflow-hidden p-5 sm:h-full sm:p-6 lg:p-7">
-        <div className="shrink-0 space-y-1">
+        <div className="shrink-0 space-y-1 text-center sm:text-left">
           <h3 className="font-serif text-xl font-semibold text-foreground lg:text-2xl">{book.title}</h3>
           <p className="text-xs text-muted-foreground">
             {book.genre} · {book.year}

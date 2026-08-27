@@ -13,7 +13,7 @@ import {
 } from '@/components/ui/dialog';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
-import { Select } from '@/components/ui/select';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { brazilianStates } from '@/lib/br-states';
 import { formatCep } from '@/lib/masks';
 import { siteConfig } from '@/lib/site-config';
@@ -39,13 +39,17 @@ export function PurchaseDialog({ open, onOpenChange, bookTitle, bookPrice }: Pur
   const [form, setForm] = useState(emptyForm);
 
   function handleChange(field: keyof typeof emptyForm) {
-    return (event: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
+    return (event: React.ChangeEvent<HTMLInputElement>) => {
       setForm((prev) => ({ ...prev, [field]: event.target.value }));
     };
   }
 
   function handleCepChange(event: React.ChangeEvent<HTMLInputElement>) {
     setForm((prev) => ({ ...prev, cep: formatCep(event.target.value) }));
+  }
+
+  function handleStateChange(value: string) {
+    setForm((prev) => ({ ...prev, state: value }));
   }
 
   function handleSubmit(event: React.FormEvent) {
@@ -61,8 +65,7 @@ export function PurchaseDialog({ open, onOpenChange, bookTitle, bookPrice }: Pur
         <DialogHeader>
           <DialogTitle>Dados para entrega</DialogTitle>
           <DialogDescription>
-            Preencha seus dados para calcularmos o frete. Você será direcionado ao WhatsApp da autora com tudo já
-            preenchido.
+            Após o preenchimento, os dados serão encaminhados diretamente ao responsável pelo pagamento e pelo frete.
           </DialogDescription>
         </DialogHeader>
 
@@ -87,21 +90,23 @@ export function PurchaseDialog({ open, onOpenChange, bookTitle, bookPrice }: Pur
             </div>
             <div className="space-y-1.5">
               <Label htmlFor="state">Estado</Label>
-              <Select id="state" required value={form.state} onChange={handleChange('state')}>
-                <option value="" disabled>
-                  UF
-                </option>
-                {brazilianStates.map((state) => (
-                  <option key={state.value} value={state.value}>
-                    {state.value}
-                  </option>
-                ))}
+              <Select required name="state" value={form.state} onValueChange={handleStateChange}>
+                <SelectTrigger id="state">
+                  <SelectValue placeholder="UF" />
+                </SelectTrigger>
+                <SelectContent>
+                  {brazilianStates.map((state) => (
+                    <SelectItem key={state.value} value={state.value}>
+                      {state.value} · {state.label}
+                    </SelectItem>
+                  ))}
+                </SelectContent>
               </Select>
             </div>
           </div>
 
           <div className="space-y-1.5">
-            <Label htmlFor="address">Endereço (rua, número, complemento)</Label>
+            <Label htmlFor="address">Endereço</Label>
             <Input id="address" required value={form.address} onChange={handleChange('address')} />
           </div>
 
