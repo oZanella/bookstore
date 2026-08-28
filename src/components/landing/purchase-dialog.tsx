@@ -61,7 +61,7 @@ export function PurchaseDialog({ open, onOpenChange, bookTitle, bookPrice }: Pur
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
-      <DialogContent>
+      <DialogContent onOpenAutoFocus={(event) => event.preventDefault()}>
         <DialogHeader>
           <DialogTitle>Dados para entrega</DialogTitle>
           <DialogDescription>
