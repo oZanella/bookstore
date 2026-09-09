@@ -10,6 +10,7 @@ export const siteConfig = {
   pixQrCodeUrl: '/pix-qrcode.png',
   shortFilm: {
     bookTitle: 'As Mortes de Sofia',
-    videoUrl: '/curta-as-mortes-de-sofia.mp4',
+    // Cole aqui o ID do vídeo do YouTube (ex: em youtube.com/watch?v=ABC123, o ID é "ABC123").
+    youtubeVideoId: '',
   },
 } as const;
