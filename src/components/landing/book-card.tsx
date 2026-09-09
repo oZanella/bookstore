@@ -48,9 +48,12 @@ export function BookCard({ book, priority = false }: BookCardProps) {
         </div>
 
         {book.description && (
-          <p className="mt-3 min-h-0 flex-1 overflow-hidden text-sm leading-relaxed text-muted-foreground lg:mt-4">
-            {book.description}
-          </p>
+          <div className="relative mt-3 min-h-0 flex-1 lg:mt-4">
+            <p className="scrollbar-thin h-full overflow-y-auto pr-2 text-sm leading-relaxed text-muted-foreground">
+              {book.description}
+            </p>
+            <div className="pointer-events-none absolute inset-x-0 bottom-0 h-6 bg-linear-to-t from-card to-transparent" />
+          </div>
         )}
 
         <div
