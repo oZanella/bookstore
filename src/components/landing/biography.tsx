@@ -5,19 +5,20 @@ export function Biography() {
         Biografia
       </h2>
 
-      <div className="mt-6 max-w-2xl space-y-4 text-sm leading-relaxed text-muted-foreground lg:mt-8 lg:text-base">
+      <div className="mt-6 space-y-4 text-sm leading-relaxed text-muted-foreground lg:mt-8 lg:text-base">
         <p>
-          Nascida em Caxias do Sul, no Rio Grande do Sul, sou casada e mãe da Natália e do Arthur. Formada em Gestão
-          de Recursos Humanos, encontrei na escrita uma forma de contar as histórias que carrego há anos.
+          Nasci e cresci em Caxias do Sul, no Rio Grande do Sul, onde vivo cercada da minha família: meu marido e
+          meus filhos, Natália e Arthur. Formada em Gestão de Recursos Humanos, foi na escrita que encontrei a forma
+          mais honesta de contar as histórias que carrego.
         </p>
         <p>
-          Sou autora de As Mortes de Sofia (2008), Para Onde Você Foi? (2016) e Espero Você (2021), além de ter
-          participado da antologia Amores em Metamorfose, com dois contos, lançada na Bienal do Livro do Rio de
-          Janeiro em 2017.
+          Há mais de dez anos publico romances que exploram amor, memória e os laços que nos definem: As Mortes de
+          Sofia (2008), Para Onde Você Foi? (2016) e Espero Você (2021), além de uma participação na antologia
+          Amores em Metamorfose, lançada na Bienal do Livro do Rio de Janeiro em 2017.
         </p>
         <p>
-          Já participei de diversos bate-papos em escolas de Caxias do Sul e região para conversar sobre meus livros,
-          e fui patrona da Feira do Livro de Vacaria em 2022.
+          Gosto de estar perto de quem lê minhas histórias: já participei de bate-papos em escolas de Caxias do Sul
+          e região, e fui patrona da Feira do Livro de Vacaria em 2022.
         </p>
       </div>
     </section>
