@@ -1,6 +1,6 @@
 'use client';
 
-import { CircleCheck, Loader2 } from 'lucide-react';
+import { CircleCheck, Loader2, Truck } from 'lucide-react';
 import { useEffect, useRef, useState } from 'react';
 
 import { Button } from '@/components/ui/button';
@@ -145,9 +145,16 @@ export function PurchaseDialog({ open, onOpenChange, bookTitle, bookPrice }: Pur
         <DialogHeader>
           <DialogTitle>Dados para entrega</DialogTitle>
           <DialogDescription>
-            Após o preenchimento, os dados serão encaminhados diretamente ao responsável pelo pagamento e pelo frete.
+            Após o preenchimento, os dados serão encaminhados diretamente ao responsável pelo pagamento e pela entrega.
           </DialogDescription>
         </DialogHeader>
+
+        <div className="flex items-center gap-2 rounded-(--radius) border border-border bg-muted px-3 py-2 text-sm text-foreground">
+          <Truck className="size-4 shrink-0 text-emerald-600" aria-hidden />
+          <span>
+            <strong>Frete grátis</strong> para todo o Brasil.
+          </span>
+        </div>
 
         <form onSubmit={handleSubmit} className="flex flex-col gap-4">
           <div className="space-y-1.5">

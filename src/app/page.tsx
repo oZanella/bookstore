@@ -1,7 +1,8 @@
 import { AuthorHero } from '@/components/landing/author-hero';
 import { Biography } from '@/components/landing/biography';
 import { BooksList } from '@/components/landing/books-list';
-import { ShortFilmSection } from '@/components/landing/short-film-section';
+// TODO: reativar quando o vídeo do curta estiver resolvido
+// import { ShortFilmSection } from '@/components/landing/short-film-section';
 import { SiteFooter } from '@/components/landing/site-footer';
 
 export default function Home() {
@@ -10,7 +11,7 @@ export default function Home() {
       <AuthorHero />
       <Biography />
       <BooksList />
-      <ShortFilmSection />
+      {/* <ShortFilmSection /> */}
       <SiteFooter />
     </main>
   );

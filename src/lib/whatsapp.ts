@@ -29,7 +29,7 @@ export function buildWhatsappPurchaseUrl(
     `*Bairro:* ${delivery.neighborhood}`,
     `*Cidade/Estado:* ${delivery.city} - ${delivery.state}`,
     '',
-    'Aguardo o valor do frete e as instruções de pagamento.',
+    'Aguardo as instruções de pagamento (frete grátis).',
   ].join('\n');
 
   return `${WHATSAPP_BASE_URL}/${phoneNumber}?text=${encodeURIComponent(message)}`;
