@@ -11,6 +11,6 @@ export const siteConfig = {
   shortFilm: {
     bookTitle: 'As Mortes de Sofia',
     // Cole aqui o ID do vídeo do YouTube (ex: em youtube.com/watch?v=ABC123, o ID é "ABC123").
-    youtubeVideoId: '',
+    youtubeVideoId: '0s6Ehq9NLJk',
   },
 } as const;

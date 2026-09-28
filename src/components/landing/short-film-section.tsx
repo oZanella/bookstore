@@ -17,7 +17,8 @@ export function ShortFilmSection() {
       <div className="relative mt-6 aspect-video w-full overflow-hidden rounded-(--radius) border border-border bg-black lg:mt-8">
         {youtubeVideoId ? (
           <iframe
-            className="absolute inset-0 h-full w-full"
+            // O vídeo tem faixas escuras embutidas nas laterais; o zoom leve as corta.
+            className="absolute inset-0 h-full w-full scale-[1.04]"
             src={`https://www.youtube-nocookie.com/embed/${youtubeVideoId}`}
             title={`Curta-metragem: ${siteConfig.shortFilm.bookTitle}`}
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
